@@ -1,6 +1,6 @@
 import { Theme } from 'types/theme.types';
 
-const colors: Theme.Colors = {
+const simpleColors: Theme.SimpleColors = {
   black: '#000000',
   white: '#FFFFFF',
   blue: {
@@ -124,6 +124,22 @@ const colors: Theme.Colors = {
     800: '#343a40',
     900: '#212529'
   }
+};
+
+const palette: Theme.Palette = {
+  primary: simpleColors.blue[500],
+  secondary: simpleColors.gray[500],
+  success: simpleColors.green[500],
+  info: simpleColors.cyan[500],
+  warning: simpleColors.yellow[500],
+  danger: simpleColors.red[500],
+  light: simpleColors.gray[100],
+  dark: simpleColors.gray[900]
+};
+
+const colors = {
+  ...simpleColors,
+  ...palette
 };
 
 export { colors };

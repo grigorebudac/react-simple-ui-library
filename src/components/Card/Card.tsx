@@ -1,13 +1,16 @@
 import React, { PropsWithChildren } from 'react';
-
-import * as Styles from './Card.styles';
+import { Box } from 'components/Box';
 
 export interface CardProps {
   example?: string;
 }
 
 const Card = (props: PropsWithChildren<CardProps>) => {
-  return <Styles.Container>{props.children}</Styles.Container>;
+  return (
+    <Box border="sm" borderColor="primary" boxShadow="sm">
+      {props.children}
+    </Box>
+  );
 };
 
 export { Card };

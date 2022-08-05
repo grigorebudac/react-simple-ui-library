@@ -1,11 +1,38 @@
-import React, { PropsWithChildren } from 'react';
+import styled from 'styled-components';
+import {
+  space,
+  layout,
+  background,
+  flexbox,
+  display,
+  border,
+  shadow,
+  SpaceProps,
+  LayoutProps,
+  BackgroundProps,
+  DisplayProps,
+  FlexboxProps,
+  BorderProps,
+  BoxShadowProps
+} from 'styled-system';
 
-export interface BoxProps {
-  example?: string;
-}
+export interface BoxProps
+  extends SpaceProps,
+    LayoutProps,
+    BackgroundProps,
+    FlexboxProps,
+    DisplayProps,
+    BorderProps,
+    BoxShadowProps {}
 
-const Box = (props: PropsWithChildren<BoxProps>) => {
-  return <div>{props.children}</div>;
-};
+const Box = styled.div<BoxProps>`
+  ${space}
+  ${layout}
+  ${background}
+  ${flexbox}
+  ${display}
+  ${border}
+  ${shadow}
+`;
 
 export { Box };

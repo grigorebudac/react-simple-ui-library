@@ -1,13 +1,13 @@
 import React, { PropsWithChildren } from 'react';
 
-import { Box } from 'components/Box';
+import { Box, BoxProps } from 'components/Box';
 
-export interface FlexProps {
-  example?: string;
-}
-
-const Flex = (props: PropsWithChildren<FlexProps>) => {
-  return <Box>{props.children}</Box>;
+const Flex = ({ children, ...props }: PropsWithChildren<BoxProps>) => {
+  return (
+    <Box display="flex" {...props}>
+      {children}
+    </Box>
+  );
 };
 
 export { Flex };

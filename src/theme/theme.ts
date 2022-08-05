@@ -9,14 +9,12 @@ import { fontWeights } from './fontWeights.theme';
 import { letterSpacings } from './letterSpacings.theme';
 import { lineHeights } from './lineHeights.theme';
 import { mediaQueries } from './mediaQueries.theme';
-import { palette } from './palette.theme';
 import { radii } from './radii.theme';
 import { shadows } from './shadows.theme';
 import { zIndices } from './zIndices.theme';
 
 export const theme: Theme.Theme = {
   colors,
-  palette,
   fontSizes,
   fonts,
   fontWeights,

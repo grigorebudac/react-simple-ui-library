@@ -6,7 +6,18 @@ export declare module Theme {
 
   type Color = Record<ColorVariation, string>;
 
-  export type Colors = {
+  export type Palette = {
+    primary: string;
+    secondary: string;
+    success: string;
+    info: string;
+    warning: string;
+    danger: string;
+    light: string;
+    dark: string;
+  };
+
+  export type SimpleColors = {
     black: string;
     white: string;
     blue: Color;
@@ -22,16 +33,7 @@ export declare module Theme {
     gray: Color;
   };
 
-  export type Palette = {
-    primary: string;
-    secondary: string;
-    success: string;
-    info: string;
-    warning: string;
-    danger: string;
-    light: string;
-    dark: string;
-  };
+  export type Colors = Palette & SimpleColors;
 
   export type FontSizes = Record<SizeVariation, string>;
 
@@ -60,7 +62,6 @@ export declare module Theme {
 
   export type Theme = {
     colors: Colors;
-    palette: Palette;
     fontSizes: FontSizes;
     fonts: Fonts;
     fontWeights: FontWeights;
